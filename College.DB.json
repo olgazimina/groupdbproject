@@ -1,0 +1,261 @@
+{
+	"info": {
+		"_postman_id": "c760ba65-3972-415f-bbed-e0cbaaa515e4",
+		"name": "College",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Person",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"person\": {\n        \"personId\": 2,\n        \"firstName\": \"Olga\",\n        \"lastName\": \"Zimina\",\n        \"email\":\"email@email.com\",\n        \"address\": \"5151 Hollow Street\",\n        \"created\": \"2012-04-23T18:25:43.511Z\",\n        \"phoneNumber\": \"613-123-1234\"\n    },\n    \"program\": {\n        \"programId\": \"333OX777\",\n        \"name\": \"Computer Programming\",\n        \"areaOfInterest\": \"Technology\",\n        \"campus\": \"Woodroffe\",\n        \"credential\": \"Advanced Diplomas\",\n        \"length\": \"2\"\n    },\n    \"courseList\": [\n        {\n            \"courseId\":\"CST8277\",\n            \"name\": \"Enterprise Application Programming\",\n            \"instructor\": \"Angela McSmith\",\n            \"credits\": \"1\"\n        },\n        {\n            \"courseId\":\"CST8276\",\n            \"name\": \"Advanced Databases\",\n            \"instructor\": \"James Smith\",\n            \"credits\": 1\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/persons/person",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"persons",
+						"person"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Many Persons",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"person\": {\n            \"personId\": 1,\n            \"firstName\": \"John\",\n            \"lastName\": \"Daniel\",\n            \"email\": \"email@email.com\",\n            \"address\": \"5151 Hollow Street\",\n            \"phoneNumber\": \"613-123-1234\",\n            \"created\": \"2012-04-23T18:25:43.511Z\"\n        },\n        \"program\": {\n            \"programId\": \"333OX777\",\n            \"name\": \"Computer Programming\",\n            \"areaOfInterest\": \"Technology\",\n            \"campus\": \"Woodroffe\",\n            \"credential\": \"Advanced Diplomas\",\n            \"length\": \"2\"\n        },\n        \"courseList\": [\n            {\n                \"courseId\": \"CST8277\",\n                \"name\": \"Enterprise Application Programming\",\n                \"instructor\": \"Angela McSmith\",\n                \"credits\": \"1\"\n            },\n            {\n                \"courseId\": \"CST8276\",\n                \"name\": \"Advanced Databases\",\n                \"instructor\": \"James Smith\",\n                \"credits\": \"1\"\n            }\n        ]\n    },\n    {\n        \"person\": {\n            \"personId\": 2,\n            \"firstName\": \"Olga\",\n            \"lastName\": \"Zimina\",\n            \"email\": \"email@email.com\",\n            \"address\": \"5151 Hollow Street\",\n            \"phoneNumber\": \"613-123-1234\",\n            \"created\": \"2012-04-23T18:25:43.511Z\"\n        },\n        \"program\": {\n            \"programId\": \"333OX777\",\n            \"name\": \"Computer Programming\",\n            \"areaOfInterest\": \"Technology\",\n            \"campus\": \"Woodroffe\",\n            \"credential\": \"Advanced Diplomas\",\n            \"length\": \"2\"\n        },\n        \"courseList\": [\n            {\n                \"courseId\": \"CST8277\",\n                \"name\": \"Enterprise Application Programming\",\n                \"instructor\": \"Angela McSmith\",\n                \"credits\": \"1\"\n            },\n            {\n                \"courseId\": \"CST8276\",\n                \"name\": \"Advanced Databases\",\n                \"instructor\": \"James Smith\",\n                \"credits\": \"1\"\n            }\n        ]\n    },\n    {\n        \"person\": {\n            \"personId\": 3,\n            \"firstName\": \"Gulmira\",\n            \"lastName\": \"Kanalinova\",\n            \"email\": \"email@email.com\",\n            \"address\": \"5151 Hollow Street\",\n            \"created\": \"2012-04-23T18:25:43.511Z\",\n            \"phoneNumber\": \"613-123-1234\"\n        },\n        \"program\": {\n            \"programId\": \"333OX776\",\n            \"name\": \"Computer Programming\",\n            \"areaOfInterest\": \"Technology\",\n            \"campus\": \"Woodroffe\",\n            \"credential\": \"Advanced Diplomas\",\n            \"length\": \"2\"\n        },\n        \"courseList\": [\n            {\n                \"courseId\": \"CST2325\",\n                \"name\": \"Enterprise Application Programming\",\n                \"instructor\": \"Angela McSmith\",\n                \"credits\": \"1\"\n            }\n        ]\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/persons/persons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"persons",
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Persons",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/persons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Person By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/persons/person/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"persons",
+						"person",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Persons By Course ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/persons/course/CST2325",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"persons",
+						"course",
+						"CST2325"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Persons By Program ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/persons/program/333OX776",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"persons",
+						"program",
+						"333OX776"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Person",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"person\": {\n        \"personId\": 2,\n        \"firstName\": \"Jack\",\n        \"lastName\": \"Daniel\",\n        \"email\": \"email@email.com\",\n        \"address\": \"5151 Hollow Street\",\n        \"created\": \"2012-04-23T18:25:43.511Z\",\n        \"phoneNumber\": \"613-123-1234\"\n    },\n    \"program\": {\n        \"programId\": \"333OX777\",\n        \"name\": \"Computer Programming\",\n        \"areaOfInterest\": \"Technology\",\n        \"campus\": \"Woodroffe\",\n        \"credential\": \"Advanced Diplomas\",\n        \"length\": \"2\"\n    },\n    \"courseList\": [\n        {\n            \"courseId\": \"CST8277\",\n            \"name\": \"Enterprise Application Programming\",\n            \"instructor\": \"Angela McSmith\",\n            \"credits\": \"1\"\n        },\n        {\n            \"courseId\": \"CST8276\",\n            \"name\": \"Advanced Databases\",\n            \"instructor\": \"James Smith\",\n            \"credits\": 1\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/persons/person",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"persons",
+						"person"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Person By ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/persons/person/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"persons",
+						"person",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete All Persons By Course ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/persons/course/CST8277",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"persons",
+						"course",
+						"CST8277"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete All Persons By Program ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/persons/program/333OX777",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"persons",
+						"program",
+						"333OX777"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
