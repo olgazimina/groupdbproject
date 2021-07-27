@@ -30,7 +30,7 @@ public class CourseDao {
                         rs.getString("instructor"),
                         rs.getString("credits")));
 
-        data.put("message", "All persons were retrieved");
+        data.put("message", "All courses were retrieved");
         data.put("status", 200);
         data.put("data", persons);
 
@@ -47,7 +47,7 @@ public class CourseDao {
                         rs.getString("instructor"),
                         rs.getString("credits")));
 
-        data.put("message", "All persons were retrieved");
+        data.put("message", "A course with ID = "+courseId+" was retrieved");
         data.put("status", 200);
         data.put("data", persons);
 

@@ -61,7 +61,7 @@ public class ProgramDao {
                         rs.getString("credential"),
                         rs.getString("length")));
 
-        data.put("message", "All programs were retrieved");
+        data.put("message", "A Program with ID = "+id+" was retrieved");
         data.put("status", 200);
         data.put("data", persons);
 

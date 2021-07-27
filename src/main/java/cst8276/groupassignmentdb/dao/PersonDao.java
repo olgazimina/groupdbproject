@@ -35,6 +35,7 @@ public class PersonDao {
                 data.put("message", e.toString());
                 data.put("status", 500);
                 data.put("data", "{}");
+                return data;
             }
         }
 
@@ -147,7 +148,7 @@ public class PersonDao {
             }
         }
 
-        data.put("message", "All persons were retrieved");
+        data.put("message", "All persons enrolled to the course with ID = "+courseId+" were retrieved");
         data.put("status", 200);
         data.put("data", retList);
 
@@ -173,7 +174,7 @@ public class PersonDao {
             }
         }
 
-        data.put("message", "All persons were retrieved");
+        data.put("message", "All persons enrolled to the program with ID = "+programId+" were retrieved");
         data.put("status", 200);
         data.put("data", retList);
 
